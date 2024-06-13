@@ -1,3 +1,5 @@
+import textwrap
+
 import pytest
 
 from logseq2obsidian import convert
@@ -56,16 +58,20 @@ def test_is_markdown_heading(string, expected):
             False
         ),
         (
-            """# test
-            :PROPERTIES:
-            :heading: true
-            :END:
-            """,
+            "\n".join(
+                [
+                    "## test",
+                    ":PROPERTIES:",
+                    ":heading: true",
+                    ":END:"
+                ]
+            ),
             True
         )
     ]
 )
 def test_is_orgmode_heading(string, expected):
+    print(f"{string=}")
     result = convert.is_orgmode_heading(string)
 
     assert result == expected
