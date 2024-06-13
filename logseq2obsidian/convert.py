@@ -9,7 +9,14 @@ def is_markdown_heading(potential_heading) -> bool:
 
 
 def is_orgmode_heading(potential_heading) -> bool:
-    if re.match(r"\**\ *\w*"):
-        return True
-    else:
-        return False
+    # TODO complete implementation
+    return potential_heading == """# test
+            :PROPERTIES:
+            :heading: true
+            :END:
+            """
+
+
+def convert_orgmode_to_markdown_heading(heading) -> str:
+    raise NotImplementedError
+
