@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "logseq-to-obsidian"
+name = "logseq2obsidian"
 version = "0.1.0"
 description = ""
 authors = ["coffeepenbit <13698065+coffeepenbit@users.noreply.github.com>"]
