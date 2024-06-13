@@ -2,7 +2,7 @@ import re
 
 
 def is_markdown_heading(potential_heading) -> bool:
-    if re.match(r"\#*\ *[^ ]+", potential_heading):
+    if re.match(r"^(#+)\s*(.*)+", potential_heading):
         return True
     else:
         return False

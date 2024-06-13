@@ -11,11 +11,19 @@ from logseq2obsidian import convert
         ),
         (
             "* test",
+            False
+        ),
+        (
+            "# test",
             True
         ),
         (
-            "* ",
-            False
+            "## test",
+            True
+        ),
+        (
+            "## *test* ==#![[heading]]==",
+            True
         )
     ]
 )
